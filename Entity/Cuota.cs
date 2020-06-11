@@ -12,5 +12,17 @@ namespace Entity
         public int NumeroCuota { get; set; }
         public decimal ValorCuota { get; set; }
         public Cliente Cliente { get; set; }
+        public Credito Credito { get; set; }
+
+
+        public void AgregarCredito(Credito credito)
+        {
+            Credito = credito;
+        }
+
+        public void AgregarCliente(Cliente cliente)
+        {
+            Cliente = cliente;
+        }
     }
 }

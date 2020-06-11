@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DtgClientes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cedulaTxt = new System.Windows.Forms.TextBox();
             this.buscarBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DtgClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(83, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(680, 361);
-            this.dataGridView1.TabIndex = 0;
+            this.DtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgClientes.Location = new System.Drawing.Point(83, 69);
+            this.DtgClientes.Name = "DtgClientes";
+            this.DtgClientes.Size = new System.Drawing.Size(680, 361);
+            this.DtgClientes.TabIndex = 0;
+            this.DtgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgClientes_CellContentClick);
             // 
             // label1
             // 
@@ -58,6 +59,7 @@
             this.cedulaTxt.Name = "cedulaTxt";
             this.cedulaTxt.Size = new System.Drawing.Size(140, 20);
             this.cedulaTxt.TabIndex = 2;
+            this.cedulaTxt.TextChanged += new System.EventHandler(this.cedulaTxt_TextChanged);
             // 
             // buscarBtn
             // 
@@ -68,6 +70,7 @@
             this.buscarBtn.TabIndex = 3;
             this.buscarBtn.Text = "Buscar";
             this.buscarBtn.UseVisualStyleBackColor = true;
+            this.buscarBtn.Click += new System.EventHandler(this.buscarBtn_Click);
             // 
             // FormGestionPagos
             // 
@@ -78,11 +81,11 @@
             this.Controls.Add(this.buscarBtn);
             this.Controls.Add(this.cedulaTxt);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DtgClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormGestionPagos";
             this.Text = "ForGestionPagos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,7 +93,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DtgClientes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cedulaTxt;
         private System.Windows.Forms.Button buscarBtn;

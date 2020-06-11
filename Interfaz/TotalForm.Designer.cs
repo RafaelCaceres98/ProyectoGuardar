@@ -34,7 +34,9 @@
             this.BtnMinimizar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtTotalRecaudado = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtTotalPrestado = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,18 +102,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 109);
+            this.label1.Location = new System.Drawing.Point(58, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Total:";
+            this.label1.Text = "Total Recaudado:";
             // 
-            // textBox1
+            // TxtTotalRecaudado
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
-            this.textBox1.TabIndex = 10;
+            this.TxtTotalRecaudado.Location = new System.Drawing.Point(166, 72);
+            this.TxtTotalRecaudado.Name = "TxtTotalRecaudado";
+            this.TxtTotalRecaudado.Size = new System.Drawing.Size(188, 20);
+            this.TxtTotalRecaudado.TabIndex = 10;
+            this.TxtTotalRecaudado.TextChanged += new System.EventHandler(this.TxtTotalRecaudado_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(58, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Total Prestado";
+            // 
+            // TxtTotalPrestado
+            // 
+            this.TxtTotalPrestado.Location = new System.Drawing.Point(166, 116);
+            this.TxtTotalPrestado.Name = "TxtTotalPrestado";
+            this.TxtTotalPrestado.Size = new System.Drawing.Size(188, 20);
+            this.TxtTotalPrestado.TabIndex = 12;
             // 
             // TotalForm
             // 
@@ -119,7 +138,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(392, 213);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtTotalPrestado);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TxtTotalRecaudado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -140,6 +161,8 @@
         private System.Windows.Forms.Button BtnMinimizar;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtTotalRecaudado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtTotalPrestado;
     }
 }

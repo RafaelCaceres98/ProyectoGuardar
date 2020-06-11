@@ -15,7 +15,6 @@ namespace Entity
         public DateTime FechaFinal { get; set; }
         public int NumeroCuotas { get; set; }
         public decimal ValorCuota { get; set; }
-        public int CuotasPagadas { get; set; }
         public Cliente Cliente { get; set; }
         
 
@@ -24,7 +23,7 @@ namespace Entity
             Cliente = cliente;
         }
 
-        private decimal CalcularTasaInteres()
+        public decimal CalcularTasaInteres()
         {
             //0.05 porque es la tasa inicial
             TasaInteres = 0.05m;
@@ -36,15 +35,9 @@ namespace Entity
             return TasaInteres;
         }
 
-        private decimal CalcularValorCuota()
+        public decimal CalcularValorCuota()
         {
-           return ValorCuota = ((ValorCredito * TasaInteres)+ValorCredito) / NumeroCuotas;
-        }
-
-        public void CalcularCredito()
-        {
-            CalcularTasaInteres();
-            CalcularValorCuota();
+           return ValorCuota = (ValorCredito * TasaInteres) / NumeroCuotas;
         }
 
     }

@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DtgClientes = new System.Windows.Forms.DataGridView();
             this.filtroCombo = new System.Windows.Forms.ComboBox();
             this.filtroLetrasTxt = new System.Windows.Forms.TextBox();
             this.filtroFecha = new System.Windows.Forms.DateTimePicker();
             this.estadoBox = new System.Windows.Forms.ComboBox();
             this.cambiarEstadoBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DtgClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(93, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(615, 320);
-            this.dataGridView1.TabIndex = 0;
+            this.DtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgClientes.Location = new System.Drawing.Point(93, 67);
+            this.DtgClientes.Name = "DtgClientes";
+            this.DtgClientes.Size = new System.Drawing.Size(615, 320);
+            this.DtgClientes.TabIndex = 0;
+            this.DtgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgClientes_CellContentClick);
             // 
             // filtroCombo
             // 
@@ -57,6 +58,7 @@
             this.filtroCombo.Name = "filtroCombo";
             this.filtroCombo.Size = new System.Drawing.Size(150, 21);
             this.filtroCombo.TabIndex = 1;
+            this.filtroCombo.SelectedIndexChanged += new System.EventHandler(this.filtroCombo_SelectedIndexChanged);
             // 
             // filtroLetrasTxt
             // 
@@ -64,6 +66,7 @@
             this.filtroLetrasTxt.Name = "filtroLetrasTxt";
             this.filtroLetrasTxt.Size = new System.Drawing.Size(196, 20);
             this.filtroLetrasTxt.TabIndex = 2;
+            this.filtroLetrasTxt.TextChanged += new System.EventHandler(this.filtroLetrasTxt_TextChanged);
             // 
             // filtroFecha
             // 
@@ -92,6 +95,7 @@
             this.cambiarEstadoBtn.TabIndex = 5;
             this.cambiarEstadoBtn.Text = "Cambiar Estado";
             this.cambiarEstadoBtn.UseVisualStyleBackColor = true;
+            this.cambiarEstadoBtn.Click += new System.EventHandler(this.cambiarEstadoBtn_Click);
             // 
             // FormListaClientes
             // 
@@ -104,11 +108,11 @@
             this.Controls.Add(this.filtroFecha);
             this.Controls.Add(this.filtroLetrasTxt);
             this.Controls.Add(this.filtroCombo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DtgClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListaClientes";
             this.Text = "FormListaClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,7 +120,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DtgClientes;
         private System.Windows.Forms.ComboBox filtroCombo;
         private System.Windows.Forms.TextBox filtroLetrasTxt;
         private System.Windows.Forms.DateTimePicker filtroFecha;

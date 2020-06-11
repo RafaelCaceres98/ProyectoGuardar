@@ -6,16 +6,22 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; ce
 using System.Windows.Forms;
+using Entity;
+using BLL;
 
 namespace Interfaz
 {
     public partial class TotalForm : Form
     {
+        private CuotaService cuotaService = new CuotaService(ConfigConnection.connectionString);
+        private CreditoService creditoService = new CreditoService(ConfigConnection.connectionString);
         public TotalForm()
         {
             InitializeComponent();
+            TxtTotalRecaudado.Text = cuotaService.TotalRecaudado().ToString();
+            TxtTotalPrestado.Text = creditoService.TotalPrestado().ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +46,11 @@ namespace Interfaz
         }
 
         private void TotalForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtTotalRecaudado_TextChanged(object sender, EventArgs e)
         {
 
         }
